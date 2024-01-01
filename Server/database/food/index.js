@@ -8,16 +8,16 @@ const FoodSchama =new mongoose.Schema({
     isContainsEgg:{type:Boolean,required:true},
     category:{type:String,required:true},
     Photos:{
-        type:mongoose.Types.ObjecteId,
+        type:mongoose.Types.ObjectId,
         ref:"Images",
     },
     price:{type:Number,default:150, required:true},
     addOns:[{
-        type:mongose.Types.ObjecteId,
+        type:mongoose.Types.ObjectId,
         ref:"Foods",
           },],
     resturent:{
-        type:mongose.Types.ObjectId,
+        type:mongoose.Types.ObjectId,
         ref:"Restaurents",
         required:"true"
     }
