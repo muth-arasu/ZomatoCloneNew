@@ -59,7 +59,7 @@ const LargeNav = () => {
 const Navber = () => {
   return (
     <>
-      <nav className='p-4 bg-white shadow-md w-full'>
+      <nav className='p-4 bg-white  w-full'>
        <MobileNav />
         <LargeNav />
 
