@@ -2,7 +2,7 @@ import React from 'react'
 //components
 import DeliveryCatagory from './DeliveryCatagory'
 import Slider from 'react-slick'
-import { NextArrow,PrevArrow} from '../arrow'
+import { NextArrow,PrevArrow} from '../Common/arrow'
 const DeliveryCarousel = () => {
 
   const DeleveryCatogoryImg = [

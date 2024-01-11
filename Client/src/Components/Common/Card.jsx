@@ -1,17 +1,20 @@
 import React from 'react'
+//react-icons
 import { TbStarFilled } from "react-icons/tb";
-const DeliveryCard = ({card}) => {
+
+const Card = ({card}) => {
   return (
     <>
-     <div className='p-3 w-full h-84 mt-3  lg:w-1/3 lg:mt-6'>
+      <div className='p-3 w-full h-64 mt-6 mt-6 lg:w-1/3 lg:mt-6'>
      <div className='bg-white p-3  rounded-lg hover:shadow-2xl '>
         <div className='w-full h-48 rounded-lg relative'>
             <div className='absolute px-2 bg-grey-800 text-white opacity-70 text-sm top-3 rounded-sm'><span>Promoted</span></div>
-            <div className='absolute px-2 bg-blue-600 text-white text-sm bottom-3 rounded-sm'><span>{card.offer}</span></div>
-            <img src={card.img}
+            <div className='absolute px-8 bg-gradient-to-r from-grey-900 via-grey-800 to-grey-0  text-white text-sm bottom-3 rounded-sm'>
+              <span className='-ml-4 text-gold-400 text-medium text-md'>Flat <strong >{card.offer}</strong></span></div>
+            <img src={card.img} 
              alt="food" className='w-full h-full rounded-lg object-cover' />
-        </div>
-        <div>
+        </div >
+        <div className='h-20'>
             <div className='flex items-center justify-between'>
                 <span className='text-xl font-medium text-grey-700 '>{card.title}</span>
                 <span className='px-1 bg-green-600 text-white text-md text-center flex items-center gap-1 rounded-sm mt-3'>{card.ratings}<TbStarFilled size={13}/></span>
@@ -22,8 +25,8 @@ const DeliveryCard = ({card}) => {
                     <span className='font-medium text-xs text-grey-600'>{card.timing} </span>
                 </div>
             </div>
-            <hr className='mt-6 mb-2' />
-            <div className='flex items-center justify-between  mb-3 gap-3'>
+            <hr className='mt-6 mb-1 invisible ' />
+            <div className='flex items-center justify-between   mb-3 gap-3 invisible'>
                 <div className='w-20 h-6 ronded-sm'>
                     <img src="https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png?output-format=webp"
                      alt="max-delivery" className='w-full h-full object-cover rounded-sm' />
@@ -34,10 +37,9 @@ const DeliveryCard = ({card}) => {
 
       </div>
      </div>
-
     </>
   )
 }
 
-export default DeliveryCard
+export default Card
 
